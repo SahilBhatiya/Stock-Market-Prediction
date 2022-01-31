@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "DisplayStock";
+}
+
+<h1>DisplayStock</h1>
+
+
+<form asp-action="DisplayStock" method="post" id="DisplayStock">
+    <input type="text" name="symbol" placeholder="symbol" value="NHPC.NS"/>
+    @*<input type="datetime-local" name="EndDate" value='2022-01-22T18:31' id="endDate"/>*@
+    <input type="submit" value="Submit" />
+</form>
+
+<input type="number" onchange="updatePercent()" id="current"/>
+<input type="number" onchange="updateQty()" id="qty"/>
+
+
+<div class="mt-4">
+    <h5>
+        Total Qty : 
+    </h5>
+    <span id="TotalQty">
+
+    </span>
+
+    <h5>
+        Total Brought Price : 
+    </h5>
+    <span id="TotalPrice">
+
+    </span>
+
+        <h5>
+        Profit Per Share : 
+
+    </h5>
+        <span id="ProfitPerShare">
+
+        </span>
+
+    <h5>
+        Next Price Within 14 Days : 
+    </h5>
+    <span id="NextPrice">
+
+    </span>
+
+    <h5>
+        Price Range : 
+    </h5>
+    <span id="PriceRange">
+
+    </span>
+
+   <h5>
+        Total Profit : 
+    </h5>
+    <span id="TotalProfit">
+
+    </span>
+
+    <h5>
+        Profit Chance : 
+    </h5>
+    <span id="ProfitChance">
+
+    </span>
+
+</div>
+
+
+
+<div id="DisplayData">
+
+</div>
+
+
+
+
+<div id="chart">
+</div>
+
+
+
+<div id="Volume">
+</div>

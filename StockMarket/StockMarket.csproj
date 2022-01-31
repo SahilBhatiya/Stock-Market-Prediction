@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-StockMarket-5317028B-4927-4492-8827-7FE77EAC878D</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.1" />
+    <PackageReference Include="Microsoft.ML" Version="1.6.0" />
+    <PackageReference Include="Microsoft.ML.FastTree" Version="1.6.0" />
+    <PackageReference Include="Microsoft.ML.LightGbm" Version="1.6.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.1" />
+    <PackageReference Include="StockSharp.Yahoo" Version="5.0.109" />
+    <PackageReference Include="YahooFinanceApi" Version="2.1.2" />
+  </ItemGroup>
+  <ItemGroup Label="StockPrediction">
+    <None Include="StockPrediction.consumption.cs">
+      <DependentUpon>StockPrediction.mbconfig</DependentUpon>
+    </None>
+    <None Include="StockPrediction.training.cs">
+      <DependentUpon>StockPrediction.mbconfig</DependentUpon>
+    </None>
+    <None Include="StockPrediction.zip" />
+  </ItemGroup>
+</Project>
